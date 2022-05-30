@@ -7,9 +7,6 @@ export const OPENWHEATHETMAP_API = axios.create({
 
 OPENWHEATHETMAP_API.interceptors.request.use(
   (config) => {
-    /// Token "ficticio" para las request
-
-    // config.headers = { ...config.headers, "pokemon-auth": `token` };
 
     return config;
   },
@@ -18,6 +15,7 @@ OPENWHEATHETMAP_API.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
 OPENWHEATHETMAP_API.interceptors.response.use(
   (response) => {
     return response.data;

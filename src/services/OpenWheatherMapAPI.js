@@ -2,7 +2,6 @@ import axios from "axios";
 
 export const OPENWHEATHETMAP_API = axios.create({
   baseURL: "http://api.openweathermap.org/",
-  key: "361de2efa7edbefcb4b3a9676cfd34f0"
 });
 
 OPENWHEATHETMAP_API.interceptors.request.use(
